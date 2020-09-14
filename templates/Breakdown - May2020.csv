@@ -1,0 +1,139 @@
+Date,Employee,Customer,Account Code,Project,Hours
+5/7/2020,John Whelan,Knoxville Utilities,Engineer I,2060,16
+5/8/2020,Mo Agharahimi,Knoxville Utilities,Sr Electrical Eng,2060,8
+5/8/2020,John Whelan,Knoxville Utilities,Engineer I,2060,4
+5/8/2020,Mo Agharahimi,Knoxville Utilities,Sr Electrical Eng,2060,10
+5/9/2020,Mo Agharahimi,Knoxville Utilities,Sr Electrical Eng,2060,10
+5/1/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,8
+5/1/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Administrative w/ Details,0.5
+5/1/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,4
+5/4/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,8
+5/4/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Administrative w/ Details,1
+5/4/2020,Anlea Cutlip,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,5
+5/4/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,8
+5/5/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,8
+5/6/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Drafter,Administrative w/ Details,8
+5/6/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,2
+5/7/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,8
+5/7/2020,Anlea Cutlip,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,5
+5/7/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,4
+5/8/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Drafter,Administrative w/ Details,12
+5/8/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,4
+5/9/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Drafter,Administrative w/ Details,8
+5/11/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Travel,Administrative w/ Details,12
+5/11/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Administrative w/ Details,1
+5/11/2020,Anlea Cutlip,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,5
+5/11/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,4
+5/12/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Administrative w/ Details,0.5
+5/12/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,4
+5/12/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,4
+5/13/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,8
+5/13/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,4
+5/14/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,8
+5/14/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Administrative w/ Details,1
+5/14/2020,Anlea Cutlip,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,5
+5/14/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,8
+5/15/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Drafter,Administrative w/ Details,8
+5/15/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Administrative w/ Details,1
+5/15/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,8
+5/18/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,8
+5/18/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Administrative w/ Details,0.5
+5/19/2020,John Whelan,Utility Packaging & Construction Inc.,Engineer I,Administrative w/ Details,2
+5/20/2020,Anlea Cutlip,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,5
+5/22/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Drafter,Administrative w/ Details,8
+5/22/2020,Anlea Cutlip,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,5
+5/25/2020,Anlea Cutlip,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,5
+5/27/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Administrative w/ Details,1
+5/28/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Drafter,Administrative w/ Details,8
+5/28/2020,Anlea Cutlip,Utility Packaging & Construction Inc.,Administrative,Administrative w/ Details,5
+5/28/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,8
+5/29/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Drafter,Administrative w/ Details,8
+5/29/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Administrative w/ Details,2
+5/1/2020,Shahin Shahbazi,GTC,Engineer I,Alma P88286 & P89331,4
+5/6/2020,Shahin Shahbazi,GTC,Engineer I,Alma P88286 & P89331,6
+5/6/2020,John Whelan,GTC,Engineer I,Alma P88286 & P89331,5
+5/7/2020,Shahin Shahbazi,GTC,Engineer I,Alma P88286 & P89331,4
+5/8/2020,Shahin Shahbazi,GTC,Engineer I,Alma P88286 & P89331,4
+5/11/2020,Shahin Shahbazi,GTC,Engineer I,Alma P88286 & P89331,4
+5/13/2020,Shahin Shahbazi,GTC,Engineer I,Alma P88286 & P89331,4
+5/18/2020,John Whelan,GTC,Engineer I,Alma P88286 & P89331,5
+5/5/2020,Cathy Howell,Duke Energy,Sr Electrical Eng,AT&T DUKE MEETING w/detail,3
+5/19/2020,Cathy Howell,Duke Energy,Sr Electrical Eng,AT&T DUKE MEETING w/detail,1
+5/4/2020,Cathy Howell,Clayco,Sr Electrical Eng,Blue Origin Fault Study,6
+5/5/2020,Cathy Howell,Clayco,Sr Electrical Eng,Blue Origin Fault Study,2
+5/6/2020,Cathy Howell,Clayco,Sr Electrical Eng,Blue Origin Fault Study,8
+5/7/2020,Cathy Howell,Clayco,Sr Electrical Eng,Blue Origin Fault Study,5
+5/13/2020,Cathy Howell,Duke Energy,Sr Electrical Eng,Cane River 115kV,7
+5/15/2020,Cathy Howell,Duke Energy,Sr Electrical Eng,Cane River 115kV,2
+5/19/2020,Mo Agharahimi,Duke Energy,Sr Electrical Eng,Cane River 115kV,3
+5/20/2020,Mo Agharahimi,Duke Energy,Sr Electrical Eng,Cane River 115kV,5
+5/13/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Customer Visit/Bid Proposal,1
+5/5/2020,Shahin Shahbazi,GTC,Engineer I,Denton Still Road 230KV,8
+5/6/2020,John Whelan,Knoxville Utilities,Engineer I,Do Not Use,17
+5/6/2020,Mickey Webb,Knoxville Utilities,Panel Work/Wiring,Do Not Use,17
+5/7/2020,Mickey Webb,Knoxville Utilities,Panel Work/Wiring,Do Not Use,16
+5/8/2020,Mickey Webb,Knoxville Utilities,Panel Work/Wiring,Do Not Use,4
+5/18/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Training,Do Not Use,8
+5/19/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Training,Do Not Use,8
+5/19/2020,John Whelan,DO NOT USE,DO NOT USE,Do Not Use,2
+5/20/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Training,Do Not Use,8
+5/21/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Training,Do Not Use,8
+5/22/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Training,Do Not Use,8
+5/26/2020,Shahin Shahbazi,Duke Energy,Engineer I,Do Not Use,8
+5/27/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,Engineer I,Do Not Use,8
+5/29/2020,Shahin Shahbazi,Duke Energy,Engineer I,Do Not Use,6
+5/14/2020,Cathy Howell,Wolf Creek Federal Services Inc.,Sr Electrical Eng,General (EXPLAIN?),4
+5/12/2020,Hossein Pezeshkian-Arjomand,Santee Cooper,Panel Work/Wiring,Georgetown Panel,8
+5/19/2020,Hossein Pezeshkian-Arjomand,Santee Cooper,Panel Work/Wiring,Georgetown Panel,8
+5/21/2020,Hossein Pezeshkian-Arjomand,Santee Cooper,Panel Work/Wiring,Georgetown Panel,8
+5/26/2020,Hossein Pezeshkian-Arjomand,Santee Cooper,Panel Work/Wiring,Georgetown Panel,8
+5/27/2020,Hossein Pezeshkian-Arjomand,Santee Cooper, Panel Work/Wiring,Georgetown Panel,8
+5/26/2020,Cathy Howell,Duke Energy,Sr Electrical Eng,Harris Switchyard,3
+5/25/2020,John Whelan,Utility Packaging & Construction Inc.,Engineer I,Holiday,8
+5/25/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Holiday,4
+5/25/2020,Shahin Shahbazi,Custom Engineering Solutions Inc.,DO NOT USE,Holiday,8
+5/25/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Drafter,Holiday,8
+5/25/2020,Mickey Webb,Utility Packaging & Construction Inc.,DO NOT USE,Holiday,8
+5/5/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Marketing w/ Details,1
+5/11/2020,Cathy Howell,Custom Engineering Solutions,Sr Electrical Eng,NON Active Project Workw/Detail,1.5
+5/7/2020,Cathy Howell,Duke Energy,Sr Electrical Eng,Offerman,3
+5/8/2020,Cathy Howell,Duke Energy,Sr Electrical Eng,Offerman,5
+5/12/2020,Cathy Howell,Duke Energy,Sr Electrical Eng,Offerman,4
+5/19/2020,Mo Agharahimi,Duke Energy,Sr Electrical Eng,Offerman,2
+5/20/2020,Mo Agharahimi,Duke Energy,Sr Electrical Eng,Offerman,5
+5/20/2020,John Whelan,Wolf Creek Federal Services Inc.,Engineer I,SEL 751 Relay Replacement,8
+5/20/2020,Mickey Webb,Wolf Creek Federal Services Inc.,Panel Work/Wiring,SEL 751 Relay Replacement,9
+5/20/2020,Mike Noori,Wolf Creek Federal Services Inc.,Project Manager,SEL 751 Relay Replacement,9
+5/21/2020,John Whelan,Wolf Creek Federal Services Inc.,Engineer I,SEL 751 Relay Replacement,10
+5/21/2020,Mickey Webb,Wolf Creek Federal Services Inc.,Panel Work/Wiring,SEL 751 Relay Replacement,9
+5/21/2020,Mike Noori,Wolf Creek Federal Services Inc.,Project Manager,SEL 751 Relay Replacement,9
+5/22/2020,John Whelan,Wolf Creek Federal Services Inc.,Engineer I,SEL 751 Relay Replacement,12
+5/22/2020,Mickey Webb,Wolf Creek Federal Services Inc.,Panel Work/Wiring,SEL 751 Relay Replacement,9
+5/22/2020,Mike Noori,Wolf Creek Federal Services Inc.,Project Manager,SEL 751 Relay Replacement,9
+5/23/2020,John Whelan,Wolf Creek Federal Services Inc.,Engineer I,SEL 751 Relay Replacement,9
+5/25/2020,Mike Noori,Wolf Creek Federal Services Inc.,Project Manager,SEL 751 Relay Replacement,8
+5/26/2020,John Whelan,Wolf Creek Federal Services Inc.,Engineer I,SEL 751 Relay Replacement,8
+5/26/2020,Cathy Howell,Wolf Creek Federal Services Inc.,Sr Electrical Eng,SEL 751 Relay Replacement,4
+5/26/2020,Mickey Webb,Wolf Creek Federal Services Inc.,Panel Work/Wiring,SEL 751 Relay Replacement,9
+5/26/2020,Mike Noori,Wolf Creek Federal Services Inc.,Project Manager,SEL 751 Relay Replacement,9
+5/27/2020,Cathy Howell,Wolf Creek Federal Services Inc.,Sr Electrical Eng,SEL 751 Relay Replacement,4
+5/27/2020,John Whelan,Wolf Creek Federal Services Inc.,Engineer I,SEL 751 Relay Replacement,10
+5/27/2020,Mickey Webb,Wolf Creek Federal Services Inc.,Panel Work/Wiring,SEL 751 Relay Replacement,9
+5/27/2020,Mike Noori,Wolf Creek Federal Services Inc.,Project Manager,SEL 751 Relay Replacement,9
+5/28/2020,Mickey Webb,Wolf Creek Federal Services Inc.,Panel Work/Wiring,SEL 751 Relay Replacement,9
+5/28/2020,Mike Noori,Wolf Creek Federal Services Inc.,Project Manager,SEL 751 Relay Replacement,9
+5/29/2020,Mickey Webb,Wolf Creek Federal Services Inc.,Panel Work/Wiring,SEL 751 Relay Replacement,9
+5/29/2020,Mike Noori,Wolf Creek Federal Services Inc.,Project Manager,SEL 751 Relay Replacement,9
+5/20/2020,Hossein Pezeshkian-Arjomand,Utility Packaging & Construction Inc.,Drafter,Sick,8
+5/1/2020,Mickey Webb,Utility Packaging & Construction Inc.,Administrative,Storage w/ Details,10
+5/1/2020,John Whelan,Utility Packaging & Construction Inc.,Engineer I,Storage w/ Details,10
+5/1/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Training w/ Details,1
+5/18/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Training w/ Details,8
+5/19/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Training w/ Details,7
+5/20/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Training w/ Details,8
+5/21/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Training w/ Details,8
+5/22/2020,Cathy Howell,Custom Engineering Solutions Inc.,Sr Electrical Eng,Training w/ Details,8
+5/11/2020,Cathy Howell,Duke Energy,Sr Electrical Eng,Vanderbilt,3.5
+5/12/2020,Cathy Howell,Duke Energy,Sr Electrical Eng,Vanderbilt,2
+5/19/2020,Mo Agharahimi,Duke Energy,Sr Electrical Eng,Vanderbilt,3
+5/20/2020,Mo Agharahimi,Duke Energy,Sr Electrical Eng,Vanderbilt,4
