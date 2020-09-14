@@ -1,7 +1,6 @@
 
 function saveToCSV(summaryCalObject, csvObject,projectName)
 {
-
     var fileName = projectName+".csv";
     let csvContent = " ";
 

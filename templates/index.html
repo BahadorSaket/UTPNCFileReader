@@ -180,7 +180,8 @@ $('#selectprojects').on('change', function() {
  
   $(".calButton").click(function() {
     var summaryCalObject= calculation(projectName,csvObject);
-    if(summaryCalObject>0)
+    console.log(summaryCalObject);
+    if(summaryCalObject.length>0)
       saveToCSV(summaryCalObject,csvObject,projectName);
   });
 
