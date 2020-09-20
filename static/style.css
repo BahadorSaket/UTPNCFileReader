@@ -1,114 +1,200 @@
-.input-file-container {
-  position: relative;
-  width: 600px;
-/*  height:700px;
-  border-width: 1px;
-  border-color: #D3D3D3;*/
-/*  border-style:solid;*/
-} 
-.js .input-file-trigger {
-/*  display: block;*/
-  padding: 14px 15px;
-  background: #39D2B4;
-  color: #fff;
-  font-size: 1em;
-  transition: all .4s;
-  cursor: pointer;
-
-
+* {
+    box-sizing: border-box;
 }
-.js .input-file {
-  position: absolute;
-  top: 0; left: 0;
-  width: 150px;
-  opacity: 0;
-  padding: 5px 0;
-  cursor: pointer;
-}
-.js .input-file:hover + .input-file-trigger,
-.js .input-file:focus + .input-file-trigger,
-.js .input-file-trigger:hover,
-.js .input-file-trigger:focus {
-  background: #34495E;
-  color: #39D2B4;
-}
-
-
-/* Style for the tab page Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border-top: none;
-}
-
-
-
-
-
-/* Useless styles, just for demo styles */
 
 body {
-  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
-  color: #7F8C9A;
-  background: #FCFDFD;
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f567;
+    padding: 10px;
 }
-h1, h2 {
-  margin-bottom: 5px;
-  font-weight: normal;
-/*  text-align: center;*/
-  color:#aaa;
+
+h1 {
+    font-weight: normal;
+    color: #888;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
 h2 {
-  margin: 5px 0 2em;
-  color: #1ABC9C;
+    font-weight: normal;
+    color: #39D2B4;
+    font-size: 20px;
+    margin: 20px 0;
 }
+
+h3 {
+    font-weight: normal;
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #7F8C9A;
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.main {
+    transition: 0.2s all ease-in-out;
+    min-height: 750px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+    background: #fff;
+    width: 586px;
+    margin: 0 auto;
+}
+
+.tab {
+    overflow: hidden;
+    background-color: #39D2B4;
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+}
+
+.tab button {
+    cursor: pointer;
+    padding: 16px 32px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    font-size: 17px;
+    float: left;
+    background-color: #eee;
+    color: #666;
+    font-weight: 400;
+}
+
+.tab button:nth-of-type(2) {
+    border-radius: 0 8px 0 0;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+    border: none;
+    outline: none;
+}
+
+.tab button.active {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    color: #1ABC9C;
+}
+
+.tabcontent {
+    display: none;
+    padding: 50px 32px;
+    border-top: none;
+}
+
 form {
-/*  width: 300px;*/
-  margin: 0 auto;
-  text-align:center;
+    margin: 0 auto;
 }
 
+.form-selection {
+    display: flex;
+    width: 100%;
+}
 
-/* Save button */
+.form-size {
+    width: 236px;
+}
+
+.form-input {
+    position: relative;
+    margin-right: 40px;
+}
+
+.js .input-file {
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.js .file-trigger {
+    padding: 12px 20px;
+    background: #39D2B4;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.input-file:hover+.file-trigger,
+.input-file:focus+.file-trigger,
+#export-button:hover+.file-trigger,
+#export-button:focus+.file-trigger,
+.file-trigger:hover,
+.file-trigger:focus {
+    background: #34495E;
+    color: #39D2B4;
+}
+
+.form-project {
+    flex-shrink: 0;
+}
+
+#selectprojects {
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+#selectprojects:active,
+#selectprojects:focus {
+    outline: none;
+}
+
+.form-project label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.new {
+    display: flex;
+    margin-top: 50px;
+}
+
+.projectsContainer {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.hours input {
+    width: 236px;
+}
+
+.calculation {
+    position: relative;
+    margin: 60px 0 40px;
+}
+
+#export-button {
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
 .saveButton {
-  background-color: #39D2B4;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 17px;
-  cursor: pointer;
-  width: 320px;
+    background-color: #39D2B4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 17px;
+    cursor: pointer;
+    width: 342px;
+    border-radius: 8px;
 }

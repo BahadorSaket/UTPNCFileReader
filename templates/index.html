@@ -1,291 +1,337 @@
-
 <!DOCTYPE html>
 <html>
-<head><link rel="stylesheet" href="/static/style.css"> </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="/static/dataPrep.js"></script>
 <script type="text/javascript" src="/static/calculation.js"></script>
 <script type="text/javascript" src="/static/saveToCSV.js"></script>
+
 <body>
-  <div class="tab">
-    <button class="tablinks" onclick="openPage(event, 'Project')">Project</button>
-    <button class="tablinks" onclick="openPage(event, 'Employee')">Employee</button>
-  </div>
-  <div id="Project" class="tabcontent">
-    <form action="#">
-        <div class="input-file-container">  
-          <h1>Utility Packaging & Construction, Inc.</h1>
-          <h2></h2>
-          <form action="{{url_for('computation')}}" method="post">
-            <input class="input-file" id="my-file" type="file" id="myFile" name="data">
-            <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
-
-            <label for="labelprojects" style=" margin-left:40px;">Select the Project</label>
-            <select id="selectprojects" name="projects" style=" width:250px; padding: 14px 15px;"> </select>
-          </form>
-          <div class="projectsContainer" style=" text-align:left; margin-top: 50px; margin-left: 50px;">
-            <div class=projectName style="width: 100%; width:550px;  margin-bottom:14px;"></div> 
-          </div> </br>
-          <div class="names" style="float:left; text-align:left; margin-top: 50px; margin-left: 50px; margin-bottom: 20px;"></div>
-          <div class="hours" style=" float:left; text-align:left; margin-top: 50px; margin-bottom: 20px;"> </div>
-          <div class="calculation" style="width:160px; margin-left: 50px; margin-top: 10px; margin-bottom: 20px;">
-
-          </div>
+    <h1>Utility Packaging & Construction, Inc.</h1>
+    <div class="main">
+        <!-- Navigation -->
+        <div class="tab">
+            <button class="tablinks" onclick="openPage(event, 'Project')">Project</button>
+            <button class="tablinks" onclick="openPage(event, 'Employee')">Employee</button>
         </div>
-    </form>
-  </div>
 
-  <div id="Employee" class="tabcontent">
-     <div class="EmployeeNames" style=" text-align:left; margin-top: 50px; margin-left: 50px;">
-        <div class="listNames" style="float:left; text-align:left; margin-top: 50px; margin-left: 50px; margin-bottom: 20px;"></div>
-        <div class="listRates" style=" float:left; text-align:left; margin-top: 50px; margin-bottom: 20px;"> </div>
-        <div class="BottomPanel" style="width:160px; margin-left: 50px; margin-top: 10px; margin-bottom: 20px;">
-          <input type="button" class="saveButton" value="Save">
+        <!-- Project -->
+        <div id="Project" class="tabcontent">
+            <form action="#">
+                <div class="input-file-container">
+                    <!-- <h2>Step 1</h2> -->
+                    <form action="{{url_for('computation')}}" method="post">
+                        <div class="form-selection">
+                            <!-- <h4>Select File</h4> -->
+                            <div class="form-input form-size">
+                                <input class="input-file" id="my-file" type="file" id="myFile" name="data">
+                                <label tabindex="0" for="my-file" class="file-trigger">Select File</label>
+                            </div>
+                            <div class="form-project form-size">
+                                <!-- <label for="labelprojects">Select Project</label> -->
+                                <select id="selectprojects" name="projects">
+                                    <option value="0">Select Project</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- <h2 style="margin-bottom: 0;">Step 2</h2> -->
+                    <div class="new">
+                        <div class="names"></div>
+                        <div class="hours"></div>
+                    </div>
+                    </br>
+                    <div class="projectsContainer">
+                        <div class=projectName style="width: 100%; width:550px;  margin-bottom:14px;"></div>
+                    </div>
+
+                    <!-- <h2>Step 3</h2> -->
+                    <div class="calculation form-size"></div>
+
+                </div>
+            </form>
         </div>
-      </div>
-  </div>
+
+
+        <!-- Employee -->
+        <div id="Employee" class="tabcontent">
+            <div class="EmployeeNames">
+                <div class="listNames" style="float:left; text-align:left; margin-top: 50px; margin-left: 50px; margin-bottom: 20px;">
+                </div>
+                <div class="listRates" style=" float:left; text-align:left; margin-top: 50px; margin-bottom: 20px;">
+                </div>
+                <div class="BottomPanel" style="width:160px; margin-left: 50px; margin-top: 10px; margin-bottom: 20px;">
+                    <input type="button" class="saveButton" value="Save">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
+
 <script type="text/javascript">
-// this contains the code related to switching between two pages
-function openPage(evt, projectName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(projectName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+    // this contains the code related to switching between two pages
+    function openPage(evt, projectName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(projectName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
 
 
-var employeeRates = {}
-var csvObject=[]; //stores data for writing 
-var allProjects= []; // includes projects for all months ... we will use this to list all projects on the dropdown menu
+    var employeeRates = {}
+    var csvObject = []; //stores data for writing 
+    var
+        allProjects = []; // includes projects for all months ... we will use this to list all projects on the dropdown menu
 
-//load the employee rates to start
-loadEmployeeRates();
-
-
-document.querySelector("html").classList.add('js');
-var fileInput  = document.querySelector( ".input-file" );
-      
-fileInput.addEventListener( "change", function( event ) {  
-  const reader = new FileReader();
-  reader.onload = function(){
-        var jqXHR = $.ajax({
-            type: "POST",
-            url: "/computation",
-            async: false,
-            data: {mydata: reader.result }
-        });
-        exportData = JSON.parse(jqXHR.responseText)
-        //console.log(exportData["response"]);
-
-        //create the object
-        dataObject = createObject(exportData["response"]);
-
-        //Sorting the projects alphabetically before loading the projects' dropdown menu
-        allProjects = allProjects.filter((c, index) => {
-          return allProjects.indexOf(c) === index;
-        }).sort();
-
-        //load the project dropdown on the interface
-        loadProjectsDropdown(allProjects);   
-  }
-  reader.readAsText(fileInput.files[0])
-
-},false); 
+    //load the employee rates to start
+    loadEmployeeRates();
 
 
-//Loads the list of the projects on the dropdown menu dynamically
-function loadProjectsDropdown(projects){
-  for(i=0;i<allProjects.length;i++)
-  {
-    $('#selectprojects').append( new Option(allProjects[i],allProjects[i]));
-  }
-}
+    document.querySelector("html").classList.add('js');
+    var fileInput = document.querySelector(".input-file");
 
-// Updates the interface upon selecting a project
-$('#selectprojects').on('change', function() {
+    fileInput.addEventListener("change", function(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            var jqXHR = $.ajax({
+                type: "POST",
+                url: "/computation",
+                async: false,
+                data: {
+                    mydata: reader.result
+                }
+            });
+            exportData = JSON.parse(jqXHR.responseText)
+                //console.log(exportData["response"]);
 
-  csvObject = [];
+            //create the object
+            dataObject = createObject(exportData["response"]);
 
-  //Clean all divs before writing on them
-  $(".projectsContainer, .names, .hours, .calculation").empty();
+            //Sorting the projects alphabetically before loading the projects' dropdown menu
+            allProjects = allProjects.filter((c, index) => {
+                return allProjects.indexOf(c) === index;
+            }).sort();
 
-  //Append the project name to the top of the div
-  var e = $('<span style="font-size: 1.3em; color:black;">Project Name: </span><span style="font-size: 1.2em; color:black;">'+this.value+'</span>');
-  $('.projectName').append(e); 
-  var projectName=this.value;
+            //load the project dropdown on the interface
+            loadProjectsDropdown(allProjects);
+        }
+        reader.readAsText(fileInput.files[0])
 
-  //loop through the data object - this will read the data for each month
-  for (const [key, val] of Object.entries(dataObject)) 
-  {
-    for (const [key1, val2] of Object.entries(val.Projects)) 
-    {
-      if(val2.name == this.value){
-        
-        var s = $('<div style=" float:left; margin-bottom:14px; width:100%; color:black;"><label style="float:left;" for=NAME ><strong>'+ val.Month+ '</strong></label></br></div>');
-        $('.projectsContainer').append(s);
-        s.attr('id', val.Month);
+    }, false);
 
-        s = $('<div style="float:left; margin-bottom: 10px;"><span><strong>Name</strong></span></div>');
-        s.attr('class', (val.Month+"Names"));
-        $('#'+val.Month).append(s);
 
-        s = $('<div class="Hours" style="float:left; margin-bottom: 10px;"><span style="margin-left:20px;"><strong>Hours</strong></span></div>');
-        s.attr('class', (val.Month+"Hours"));
-        $('#'+val.Month).append(s);
+    //Loads the list of the projects on the dropdown menu dynamically
+    function loadProjectsDropdown(projects) {
+        for (i = 0; i < allProjects.length; i++) {
+            $('#selectprojects').append(new Option(allProjects[i], allProjects[i]));
+        }
+    }
 
-        s = $('<div class="Rates" style="margin-bottom: 10px;"><span style="margin-left:20px;"><strong>Rate</strong></span></div>');
-        s.attr('class', (val.Month+"Rates"));
-        $('#'+val.Month).append(s);
+    // Updates the interface upon selecting a project
+    $('#selectprojects').on('change', function() {
 
-        var tempArray= []; // this collects the data for each person for a specific month
+        csvObject = [];
 
-        for(i=0;i<val2.info.length;i++)
-        {
-          var id= (val2.info[i].employee).toString(); 
-          id= id.split(' ').join('');
+        //Clean all divs before writing on them
+        $(".projectsContainer, .names, .hours, .calculation").empty();
 
-          createLabel(id, "employeeName",(val.Month+"Names"), val2.info[i].employee,0);
+        //Append the project name to the top of the div
+        var e = $(
+            '<span style="font-size: 1.3em; color:black;">Project Name: </span><span style="font-size: 1.2em; color:black;">' +
+            this.value + '</span>');
+        $('.projectName').append(e);
+        var projectName = this.value;
 
-          createInput(id, "employeeHour",(val.Month+"Hours"), 0);   
-          $("."+val.Month+"Hours").find("#"+id).children(":input").val(val2.info[i].Hours);
-           
-          createInput(id, "employeeRate",(val.Month+"Rates"), 0);
-          $("."+val.Month+"Rates").find("#"+id).children(":input").val(employeeRates[val2.info[i].employee]);
+        //loop through the data object - this will read the data for each month
+        for (const [key, val] of Object.entries(dataObject)) {
+            for (const [key1, val2] of Object.entries(val.Projects)) {
+                if (val2.name == this.value) {
 
-          tempArray.push({"Name": val2.info[i].employee,"Hours": val2.info[i].Hours, "Rates":employeeRates[val2.info[i].employee]})
+                    var s = $(
+                        '<div style=" margin-bottom:14px; width:100%; color:black;"><label style="float:left;" for=NAME ><strong>' +
+                        val.Month + '</strong></label></br></div>');
+                    $('.projectsContainer').append(s);
+                    s.attr('id', val.Month);
+
+                    s = $(
+                        '<div style="float:left; margin-bottom: 10px;"><span><strong>Name</strong></span></div>'
+                    );
+                    s.attr('class', (val.Month + "Names"));
+                    $('#' + val.Month).append(s);
+
+                    s = $(
+                        '<div class="Hours" style="float:left; margin-bottom: 10px;"><span style="margin-left:20px;"><strong>Hours</strong></span></div>'
+                    );
+                    s.attr('class', (val.Month + "Hours"));
+                    $('#' + val.Month).append(s);
+
+                    s = $(
+                        '<div class="Rates" style="margin-bottom: 10px;"><span style="margin-left:20px;"><strong>Rate</strong></span></div>'
+                    );
+                    s.attr('class', (val.Month + "Rates"));
+                    $('#' + val.Month).append(s);
+
+                    var tempArray = []; // this collects the data for each person for a specific month
+
+                    for (i = 0; i < val2.info.length; i++) {
+                        var id = (val2.info[i].employee).toString();
+                        id = id.split(' ').join('');
+
+                        createLabel(id, "employeeName", (val.Month + "Names"), val2.info[i].employee, 0);
+
+                        createInput(id, "employeeHour", (val.Month + "Hours"), 0);
+                        $("." + val.Month + "Hours").find("#" + id).children(":input").val(val2.info[i].Hours);
+
+                        createInput(id, "employeeRate", (val.Month + "Rates"), 0);
+                        $("." + val.Month + "Rates").find("#" + id).children(":input").val(employeeRates[val2
+                            .info[i]
+                            .employee]);
+
+                        tempArray.push({
+                            "Name": val2.info[i].employee,
+                            "Hours": val2.info[i].Hours,
+                            "Rates": employeeRates[val2.info[i].employee]
+                        })
+                    }
+
+                    csvObject.push({
+                        "Month": val.Month,
+                        "info": tempArray
+                    });
+                }
+            }
         }
 
-        csvObject.push({"Month": val.Month, "info":tempArray});
-      }
+        createLabel("OverheadRate", "summary", "names", "Overhead Rate", 20);
+        createInput("OverheadRatevalue", "summary", "hours", 20);
+        $("#OverheadRatevalue").children(":input").val("75%");
+
+        createLabel("totalBudget", "summary", "names", "Budget", 0);
+        createInput("totalBudgetValue", "summary", "hours", 0);
+
+        var button1 = $('<input class="calButton" type="button" id="export-button" value="Export Summary"/>');
+        var button2 = $('<label tabindex="0" for="export-button" class="file-trigger">Export</label>')
+        $(".calculation").append(button1).append(button2);
+
+
+        $(".calButton").click(function() {
+            var summaryCalObject = calculation(projectName, csvObject);
+            console.log(summaryCalObject);
+            if (summaryCalObject.length > 0)
+                saveToCSV(summaryCalObject, csvObject, projectName);
+        });
+
+    });
+
+
+    function createLabel(labelID, labelClass, appendClass, labelValue, marginTop) {
+        var s = $('<div style="margin-bottom:6px; width:254px;"><label for=NAME >' + labelValue + '</label></div>');
+        s.attr('id', labelID);
+        s.attr('class', labelClass);
+        $('.' + appendClass).append(s);
+        $("#" + labelID).css("margin-top", marginTop);
     }
-  }
 
-  createLabel("OverheadRate", "summary","names","Overhead Rate",20);
-  createInput("OverheadRatevalue", "summary", "hours",15);
-  $("#OverheadRatevalue").children(":input").val("75%");
+    function createInput(inputID, inputClass, appendClass, marginTop) {
 
-  createLabel("totalBudget", "summary", "names", "Budget",0);
-  createInput("totalBudgetValue", "summary", "hours",0);
-  
-  var button1= $('<input style="float:left;" class="calButton" type="button" value="Export Summary"/>');
-  $(".calculation").append(button1);
- 
-  $(".calButton").click(function() {
-    var summaryCalObject= calculation(projectName,csvObject);
-    console.log(summaryCalObject);
-    if(summaryCalObject.length>0)
-      saveToCSV(summaryCalObject,csvObject,projectName);
-  });
-
-}); 
-
-
-function createLabel(labelID, labelClass, appendClass, labelValue,marginTop){
-  var s = $('<div style="margin-bottom:4px; width:230px;"><label for=NAME >'+ labelValue+ '</label></div>');
-  s.attr('id', labelID);
-  s.attr('class', labelClass);
-  $('.'+appendClass).append(s);
-  $("#"+labelID).css("margin-top",marginTop);
-}
-
-function createInput(inputID, inputClass, appendClass, marginTop){
- 
-   var s = $('<div style="margin-bottom:4px;"><input type=text size=10 style="margin-left:20px;"></div>');
-   s.attr('id', inputID);
-   s.attr('class', inputClass);
-   $('.'+appendClass).append(s);
-   $("#"+inputID).css("margin-top",marginTop);
-   if($('.'+inputClass).attr('class') == "employeeHour")
-   {
-     $("#"+inputID).children(":input").prop("readonly", true);
-   }
-}
-
-
-function loadEmployeeRates(){
-  $("#employeeNames, #employeeRates").empty();
-  
-  updateEmployeeRates();
-  
-  Object.keys(employeeRates).forEach(function(key,index) {
-    id= key.split(' ').join('');
-    createInput(id+"XX", "employeeNames", "listNames");
-    $("#"+id+"XX").find('input').val(key);
-    $("#"+id+"XX").find('input').attr('size',25);
-
-    createInput(id+"YY", "employeeRates", "listRates");
-    $("#"+id+"YY").find('input').val(employeeRates[key]);
-  });
-
-    createInput("XX", "employeeNames", "listNames");
-    $("#XX").find('input').attr('size',25);
-
-    createInput("YY", "employeeRates", "listRates");
-}
-
-$(".saveButton").click(function() {
-  var employeesTemp= [];
-  $('.listNames div.employeeNames').find('input').each(function () {
-    
-    id = $(this).parent().attr('id');
-    if(id !== "XX")
-    {
-      name = this.value;
-      id= name;
-      id= id.split(' ').join('');
-      rate = $("#"+id+"YY").find('input').val();
-      console.log(name, rate)
-      if(name.length && !isNaN(parseInt(rate)))
-      {
-        employeesTemp.push([name,rate]);
-      }
-      else
-      {
-        alert("Please enter the name and rate. Otherwise the name will not be saved")
-      }
+        var s = $('<div style="margin-bottom:4px;"><input type=text size=10 style="margin-left:20px;"></div>');
+        s.attr('id', inputID);
+        s.attr('class', inputClass);
+        $('.' + appendClass).append(s);
+        $("#" + inputID).css("margin-top", marginTop);
+        if ($('.' + inputClass).attr('class') == "employeeHour") {
+            $("#" + inputID).children(":input").prop("readonly", true);
+        }
     }
-    else
-    {
-      name = $("#XX").find('input').val();
-      rate = $("#YY").find('input').val();
-      console.log(parseInt(rate))
-      if(name.length && !isNaN(parseInt(rate)))
-        employeesTemp.push([name,rate]);
+
+
+    function loadEmployeeRates() {
+        $("#employeeNames, #employeeRates").empty();
+
+        updateEmployeeRates();
+
+        Object.keys(employeeRates).forEach(function(key, index) {
+            id = key.split(' ').join('');
+            createInput(id + "XX", "employeeNames", "listNames");
+            $("#" + id + "XX").find('input').val(key);
+            $("#" + id + "XX").find('input').attr('size', 25);
+
+            createInput(id + "YY", "employeeRates", "listRates");
+            $("#" + id + "YY").find('input').val(employeeRates[key]);
+        });
+
+        createInput("XX", "employeeNames", "listNames");
+        $("#XX").find('input').attr('size', 25);
+
+        createInput("YY", "employeeRates", "listRates");
     }
-  });
-  console.log(employeesTemp)
-  //sending the data to save on the database
-  var myJsonString = JSON.stringify(employeesTemp);
-  var jqXHR = $.ajax({
-      type: "POST",
-      url: "/SaveData",
-      async: false,
-      data: {mydata: myJsonString}
-  });
-  updateEmployeeRates();
-});
 
-function updateEmployeeRates(){
-  var jqXHR = $.ajax({
-      type: "POST",
-      url: "/loadEmployee",
-      async: false,
-      data: {}
-  });
-  exportData = JSON.parse(jqXHR.responseText)
-  var array = exportData["database"];
-  employeeRates= Object.assign(...array.map(([v, k]) => ({ [v]: parseFloat(k) })));
-}
+    $(".saveButton").click(function() {
+        var employeesTemp = [];
+        $('.listNames div.employeeNames').find('input').each(function() {
 
+            id = $(this).parent().attr('id');
+            if (id !== "XX") {
+                name = this.value;
+                id = name;
+                id = id.split(' ').join('');
+                rate = $("#" + id + "YY").find('input').val();
+                console.log(name, rate)
+                if (name.length && !isNaN(parseInt(rate))) {
+                    employeesTemp.push([name, rate]);
+                } else {
+                    alert("Please enter the name and rate. Otherwise the name will not be saved")
+                }
+            } else {
+                name = $("#XX").find('input').val();
+                rate = $("#YY").find('input').val();
+                console.log(parseInt(rate))
+                if (name.length && !isNaN(parseInt(rate)))
+                    employeesTemp.push([name, rate]);
+            }
+        });
+        console.log(employeesTemp)
+            //sending the data to save on the database
+        var myJsonString = JSON.stringify(employeesTemp);
+        var jqXHR = $.ajax({
+            type: "POST",
+            url: "/SaveData",
+            async: false,
+            data: {
+                mydata: myJsonString
+            }
+        });
+        updateEmployeeRates();
+    });
+
+    function updateEmployeeRates() {
+        var jqXHR = $.ajax({
+            type: "POST",
+            url: "/loadEmployee",
+            async: false,
+            data: {}
+        });
+        exportData = JSON.parse(jqXHR.responseText)
+        var array = exportData["database"];
+        employeeRates = Object.assign(...array.map(([v, k]) => ({
+            [v]: parseFloat(k)
+        })));
+    }
 </script>
+
 </html>
-
-
