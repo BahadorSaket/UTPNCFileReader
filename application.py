@@ -56,6 +56,8 @@ def SaveData():
 
 @app.route("/computation", methods=['GET', 'POST'])
 def computation():
+	return resp
+	return render_template('index.html', message='')
 	data = request.form['mydata']
 	data = data.replace('\r', '')
 	data = data.replace(', Inc', 'Inc')
@@ -66,15 +68,11 @@ def computation():
 	df = df[df.Hours.notnull()]
 	df['Hours'] = df['Hours'].astype(float)
 	df['Date'] = pd.to_datetime(df['Date']);
-	df= df.groupby([df['Date'].dt.strftime('%B'), 'Project','Employee'])['Hours'].sum()
-	df=df.iloc[::-1]
+	df= df.sort_values(by=['Date']).groupby([df['Date'].dt.strftime('%B'), 'Project','Employee'], sort=False)['Hours'].sum()
+	print(df)
 	result = df.to_json()
 	resp = make_response('{"response": '+result+'}')
 	resp.headers['Content-Type'] = "application/json"
-	
-	return resp
-	return render_template('index.html', message='')
-
 
 if __name__ == '__main__':
     app.run(threaded=True, port=5000)
