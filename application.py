@@ -56,6 +56,19 @@ def SaveData():
 
 @app.route("/computation", methods=['GET', 'POST'])
 def computation():
+	MonthDict={ 1 : "January",
+       2 : "February",
+       3 : "March",
+       4 : "April",
+       5 : "May",
+       6 : "June",
+       7 : "July",
+       8 : "August",
+       9 : "September",
+       10 : "October",
+       11 : "November",
+       12 : "December"
+    }
 	data = request.form['mydata']
 	data = data.replace('\r', '')
 	data = data.replace(', Inc', 'Inc')
@@ -65,9 +78,10 @@ def computation():
 	df.columns = new_header #set the header row as the df header
 	df = df[df.Hours.notnull()]
 	df['Hours'] = df['Hours'].astype(float)
-	df['Date'] = pd.to_datetime(df['Date']);
-	df= df.sort_values(by=['Date']).groupby([df['Date'].dt.strftime('%B'), 'Project','Employee'], sort=False)['Hours'].sum()
-	print(df)
+	df['Date'] = pd.to_datetime(df['Date'])
+	df= (df.groupby([df['Date'].dt.month, 'Project','Employee'])['Hours'].sum()
+       .rename(MonthDict, level=0))
+	print(df.to_string())
 	result = df.to_json()
 	resp = make_response('{"response": '+result+'}')
 	resp.headers['Content-Type'] = "application/json"
