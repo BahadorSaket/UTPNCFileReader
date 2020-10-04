@@ -56,8 +56,6 @@ def SaveData():
 
 @app.route("/computation", methods=['GET', 'POST'])
 def computation():
-	return resp
-	return render_template('index.html', message='')
 	data = request.form['mydata']
 	data = data.replace('\r', '')
 	data = data.replace(', Inc', 'Inc')
@@ -73,6 +71,9 @@ def computation():
 	result = df.to_json()
 	resp = make_response('{"response": '+result+'}')
 	resp.headers['Content-Type'] = "application/json"
+	
+	return resp
+	return render_template('index.html', message='')
 
 if __name__ == '__main__':
     app.run(threaded=True, port=5000)
